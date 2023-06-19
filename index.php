@@ -58,9 +58,19 @@ header{
 html, body {
     height: 100%;
     background-color: #152733;
-    overflow: hidden;
+    overflow: scroll;
 }
-
+.footer {
+    position: relative;
+    bottom: 80;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #152733;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
 .button_plus {
   position: relative;
   float:right;
@@ -225,13 +235,13 @@ html, body {
 
 .valid-feedback{
    color: #2acc80;
-
-
 }
+  
+
 </style>
   </head>
   <body>
-  <?php include 'navbar.php'; ?> <!-- Include the navigation bar file -->
+  <?php include 'navbar.php'; ?> 
 
   <header>
     <h1>Students</h1>
@@ -282,8 +292,8 @@ html, body {
             <td><?php echo $customer['GPA'] ?></td>
 
             <td>
-             
-              <button class="btn btn-danger"><a href="index.php?deleteId=<?php echo $customer['Id'] ?>" onclick="confirm('Are you sure want to delete this record')">
+          
+                button class="btn btn-danger"><a href="index.php?deleteId=<?php echo $customer['Id'] ?>" onclick="confirm('Are you sure want to delete this record')">
                   <i class="fa fa-trash text-white" aria-hidden="true"></i>
                 </a></button>
             </td>
@@ -294,5 +304,8 @@ html, body {
     </section>
   
 </main>
+<footer class="footer">
+  <p style="position: relative; bottom:100; padding: 90px;"><?php include 'navbar.php'; ?> </p>
+</footer>
 </body>
 </html>

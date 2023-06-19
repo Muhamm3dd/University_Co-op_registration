@@ -61,7 +61,7 @@ header{
 html, body {
     height: 100%;
     background-color: #152733;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
@@ -197,6 +197,7 @@ html, body {
 .valid-feedback{
    color: #2acc80;
 }
+
 </style>
 </head>
 <body>
@@ -243,5 +244,9 @@ html, body {
       </div>
     </div>
   </section>
+  <footer>
+  <p style="position: relative; bottom:100; padding: 10px;"><?php include 'navbar.php'; ?> </p>
+  <p ><a href= "https://www.linkedin.com/in/muhamm3dd"> @muhammad</a> </p>
+</footer>
 </body>
 </html>
