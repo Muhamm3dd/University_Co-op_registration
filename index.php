@@ -20,15 +20,219 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <!--  Add our Bootstrap  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+     <!-- Add our Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" > 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!--  Add our custom CSS  -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <script>
+function toggleAboutInfo(event) {
+  event.preventDefault(); // Prevents the default link behavior
+
+  var aboutInfo = document.getElementById("about-info");
+  aboutInfo.classList.toggle("show");
+}
+</script>
+
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+*, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+header{
+  width: 100%;
+  height: 200px;
+  background: #152733;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html, body {
+    height: 100%;
+    background-color: #152733;
+    overflow: hidden;
+}
+
+.button_plus {
+  position: relative;
+  float:right;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid #095776;
+
+  /* Mittig */
+  top: 50%;
+  left: 50%;
+}
+
+.button_plus:after {
+  content: '';
+  position: absolute;
+    float:right;
+
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #095776;
+  top: 50%;
+  left: 50%;
+}
+
+.button_plus:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #095776;
+  height: 50%;
+  width: 4px;
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+  background: #fff;
+  transition: 0.2s;
+}
+
+.button_plus:hover {
+  background-color: #095776;
+  transition: 0.2s;
+}
+.form-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+}
+
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.form-content .form-items {
+    border: 3px solid #fff;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    min-width: 540px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: left;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.form-content h3 {
+    color: #fff;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+
+.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: #fff;
+}
+
+.form-content input[type=text], .form-content input[type=email],.form-content input[type=text], .form-content input[type=text], .form-content input[type=number], .form-content select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+
+.form-content textarea {
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+}
+
+.form-content textarea:hover, .form-content textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: #8D8D8D;
+}
+
+.mv-up{
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback{
+    color: #ff606e;
+}
+
+.valid-feedback{
+   color: #2acc80;
+
+
+}
+</style>
   </head>
   <body>
+  <?php include 'navbar.php'; ?> <!-- Include the navigation bar file -->
+
   <header>
     <h1>Students</h1>
   </header>
@@ -48,9 +252,10 @@
             </div>";
       }
     ?>
+    
     <section>
       <h2>View Records
-      <a href="add.php" style="float:right;"><button class="btn btn-success"><i class="fas fa-plus"></i></button></a>
+      <a href="add.php" style="float:right;"><button class="button_plus"></button></a>
       </h2>
       <table class="table table-hover table-dark table-striped">
         <thead>
@@ -87,6 +292,7 @@
         </tbody>
       </table>
     </section>
+  
 </main>
 </body>
 </html>
